@@ -21,7 +21,17 @@ N64 2ビット分をUART 8ビットで下記表に合わせて表現する
 N64コントローラは1線式半二重シリアルプロトコルを使用しています。
 それに対応するため、画像のように`TX`にダイオードを挟んで`RX`と合わせて接続する
 
+![image](https://github.com/user-attachments/assets/c4cb93f5-1f1e-4608-b97d-f25487db966b)
+
 ![image](https://github.com/user-attachments/assets/83a9f5d3-5add-4575-aeeb-9239a3bcbf45)
+
+ESP32-DevkitにはUARTで使用できるシリアルが3つ存在するが、SerialはUSBシリアルと共用しているため、USBを使用する場合は使用することができない
+
+|         | RX  | TX  |
+| ---     | --- | --- |
+| Serial  | 3   | 1   |
+| Serial1 | 9   | 10  |
+| Serial2 | 16  | 17  |
 
 ##　使い方
 
